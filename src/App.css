@@ -146,6 +146,10 @@ img {
     padding-block: 5rem;
 }
 
+.section:not(:is(.about, .menu)) .section-header {
+    text-align: center;
+}
+
 /*=============== LAYOUT ===============*/
 
 .container {

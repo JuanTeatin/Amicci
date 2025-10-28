@@ -13,8 +13,9 @@ import { Navigation } from 'swiper/modules';
 const Home = () => {
   return (
     <section className="home">  
-        <Swiper 
+      <Swiper 
           speed={1000}
+          loop={true}
           modules={[Navigation]} navigation={{
           nextEl: '.next-btn',
           prevEl: '.prev-btn',
