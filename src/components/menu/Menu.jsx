@@ -28,10 +28,10 @@ const Menu = () => {
       <div className="container">
         <div className="menu-header">
           <SectionTitle
-            subtitle='Nuestro Menu' 
+            subtitle='Nuestro menu' 
             title={
               <>
-                Adentrate a ver <span> Nuestro menú</span> 
+                Adentrate a ver <span className='ourMenu'> Nuestro menú</span> 
               </>
             } 
           />

@@ -1,19 +1,39 @@
+import React, { useEffect, useState } from 'react'
 import Logo from '../../assets/logo.png';
 import { navLinks } from '../../Data';
 import ScrollLink from '../link/ScrollLink';
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { CgMenuLeft } from "react-icons/cg";
+import { Link } from 'react-scroll';
+import { animateScroll } from 'react-scroll';
 
 import "./header.css";
-import React from 'react'
 
 const Header = () => {
+  const [scrollNav, setScrollNav] = React.useState(false);
+
+  const changeNav = () => {
+    if(window.scrollY >= 80){
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  const scrollTop = () => {
+    animateScroll.scrollToTop();
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav);
+  }, [])
+
   return (
-    <header className='header'>
+    <header className={`${scrollNav ? 'scroll-header' : ''} header`}>
       <nav className='nav container'>
-        <a href='/' className='nav-logo'>
+        <Link to='/' onClick={scrollTop} className='nav-logo'>
           <img src={Logo} alt="" className='nav-logo-img' />
-        </a>
+        </Link>
 
         <div className="nav-menu">
           <ul className="nav-list">
@@ -23,6 +43,7 @@ const Header = () => {
                   <ScrollLink 
                     to={navLink} 
                     name={navLink} 
+                    extraProps={{ spy: true }}
                     className="nav-link"
                   />
                 </li>
@@ -35,6 +56,7 @@ const Header = () => {
           <ScrollLink 
             to='reservation' 
             name='Reserva' 
+            extraProps={{ offset: -150 }}
             className="button"
             icon={<FaCircleArrowRight className='button-icon' />}
           />

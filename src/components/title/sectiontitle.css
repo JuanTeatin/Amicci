@@ -1,5 +1,5 @@
 .section-subtitle {
-    color: var(--first-color);
+    color: var(--amicci-color);
     font-family: var(--second-font);
     font-size: var(--h2-font-size);
     position: relative;
@@ -16,7 +16,7 @@
 .section-subtitle::before {
     bottom: -1px;
     width: 50px;
-    border: 1px solid var(--first-color);
+    border: 1px solid var(--amicci-color);
     border-radius: 1rem;
 }
 
@@ -24,7 +24,7 @@
     bottom: -0.25rem;
     width: 8px;
     height: 8px;
-    background-color: var(--first-color);
+    background-color: var(--amicci-color);
 }
 
 .section-title {

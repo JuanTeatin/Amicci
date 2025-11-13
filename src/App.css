@@ -15,6 +15,7 @@
 --container-color: hsla(37, 89%, 64%, 0.25);
 --border-color: hsl(var(--hue), 4%, 91%);
 --white-color: hsl(var(--hue), 4%, 100%);
+--amicci-color: hsl(26,97%,12%);
 
 --italian-green: hsl(137, 99%, 45%);
 --italian-white: hsl(0, 0%, 100%);
@@ -105,13 +106,14 @@ img {
 .button {
     display: inline-flex;
     background-color: var(--first-color);
-    color: var(--white-color);
+    color: var(--amicci-color);
     padding: 1rem 1.25rem;
     border-radius: 2rem 2rem 0 2rem;
     align-items: center;
     column-gap: 0.5rem;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
     z-index: 10;
 }
 
@@ -123,7 +125,7 @@ img {
     transform: translate(-50%, -50%) scale(0);
     width: 160px;
     height: 160px;
-    background-color: var(--second-color);
+    background-color: var(--italian-white);
     border-radius: 50%; 
     z-index: -10;
     transition: transform 0.5s ease;

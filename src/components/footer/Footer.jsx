@@ -5,17 +5,24 @@ import { FaMapMarkedAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
 import { footerLinks } from '../../Data';
 import ScrollLink from '../link/ScrollLink';
+import { Link } from 'react-scroll';
+import { animateScroll } from 'react-scroll';
 
 import './footer.css';
 
 const Footer = () => {
+
+  const scrollTop = () => {
+    animateScroll.scrollToTop();
+  };
+
   return (
     <footer className='footer section'>
       <div className="footer-container container grid">
         <div className='spaces'>
-          <a href="" className="footer-logo">
+          <Link to="/" onClick={scrollTop} className="footer-logo">
             <img src={Logo} alt="" className="footer-logo-img" />
-          </a>
+          </Link>
 
           <p className="footer-description">Amicci es una cocina oculta que combina sabor artesanal y tradición italiana. Elaboramos pizzas con ingredientes frescos, 
             ideales para compartir y disfrutar una experiencia auténtica y deliciosa.

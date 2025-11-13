@@ -84,7 +84,7 @@ const Reservation = () => {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <section className="reservation-container container">
+    <section className="reservation reservation-container container">
       <form action="" className="reservation-form grid">
 
         <div className="reservation-group grid">
@@ -154,7 +154,7 @@ const Reservation = () => {
           </div>  
 
           <button className='button reservation-button'>
-            Agenda ahora <FaCircleArrowRight className='button-icon' />
+            Agenda <FaCircleArrowRight className='button-icon' />
           </button>
         </div>
       </form>

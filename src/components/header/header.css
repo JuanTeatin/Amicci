@@ -19,6 +19,11 @@
     column-gap: 4.75rem;
 }
 
+.nav-logo-img,
+.nav-link {
+    cursor: pointer;
+}
+
 .nav-logo-img {
     width: 170px;
 }
@@ -67,10 +72,23 @@
 
 /* Activate link */
 
-.nav-link:hover {
+.nav-link:hover,
+.active {
     color: var(--first-color);
 }
 
-.nav-link:hover::before{
+.nav-link:hover::before,
+.active::before{
     width: 20px;
 }
+
+/* Change background header */
+
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 8px 36px hsla(var(--hue), 90%, 8%, 0.1) !important;
+}
+
+.scroll-header :is(.nav-link:not(.active), .nav-toggler) {
+    color: var(--title-color);
+}   

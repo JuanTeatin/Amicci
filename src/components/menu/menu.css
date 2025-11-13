@@ -2,6 +2,7 @@
     background-color: var(--container-color);
 }
 
+
 .menu-header,
 .menu-data {
     align-items: center;
@@ -23,7 +24,7 @@
 }
 
 .active-item {
-    background-color: var(--first-color);
+    background-color: var(--amicci-color);
     color: var(--white-color);
 }
 
@@ -46,11 +47,16 @@
     bottom: -0.625rem;
     width: 95%;
     height: 80%;
-    background-color: var(--first-color);
+    background-color: var(--amicci-color);
     border-radius: inherit;
     transform: rotate(5deg);
     z-index: -10;
     transition: left 0.5s ease, bottom 0.5s ease, transform 0.5s ease;
+}
+
+span.ourMenu {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--amicci-color);
 }
 
 .menu-item:hover::before{
@@ -66,7 +72,7 @@
 }
 
 .menu-price {
-    color: var(--first-color);
+    color: var(--amicci-color);
     font-size: var(--h3-font-size);
 }
 

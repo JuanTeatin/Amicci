@@ -13,7 +13,7 @@
     content: '';
     position: absolute;
     inset: auto 3rem 0;
-    border-bottom: 3px solid var(--first-color);
+    border-bottom: 3px solid var(--amicci-color);
     border-radius: 1rem;
 }
 
@@ -21,7 +21,7 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    background-color: var(--first-color);
+    background-color: var(--amicci-color);
     border: 8px solid var(--body-color);
     border-radius: 50%;
     left: 0;
@@ -38,7 +38,7 @@
 .features-no {
     text-align: right;
     color: transparent;
-    -webkit-text-stroke: 2px var(--first-color);
+    -webkit-text-stroke: 2px var(--amicci-color);
     font-size: var(--h2-font-size);
     line-height: 0.8;
 }
