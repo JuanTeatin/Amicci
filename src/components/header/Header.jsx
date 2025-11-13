@@ -11,6 +11,7 @@ import "./header.css";
 
 const Header = () => {
   const [scrollNav, setScrollNav] = React.useState(false);
+  const [showMenu, setShowMenu] = React.useState(false);
 
   const changeNav = () => {
     if(window.scrollY >= 80){
@@ -35,7 +36,7 @@ const Header = () => {
           <img src={Logo} alt="" className='nav-logo-img' />
         </Link>
 
-        <div className="nav-menu">
+        <div className={`${showMenu ? 'show-menu' : ''} nav-menu`}>
           <ul className="nav-list">
             {navLinks.map((navLink, index) =>{
               return(
@@ -61,7 +62,7 @@ const Header = () => {
             icon={<FaCircleArrowRight className='button-icon' />}
           />
 
-          <CgMenuLeft className='nav-toggler' />
+          <CgMenuLeft onClick={() => setShowMenu(!showMenu)} className='nav-toggler' />
         </div>
 
       </nav>

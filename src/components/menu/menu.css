@@ -12,7 +12,8 @@
 
 .menu-list {
     display: flex;
-    column-gap: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 .menu-list-item {
